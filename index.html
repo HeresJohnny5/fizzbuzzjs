@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta class="author" content="John Erickson">
+	
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="/styles/styles.css" type="text/css">
+	
+	<!-- Media Queries CSS -->
+	<link rel="stylesheet" href="/styles/queries.css" type="text/css">
+	<title>JS FizzBuzz</title>
+</head>
+<body>	
+	<main id="mainRaised">
+		<section class="mainContent">
+			<h2>App parameters:</h2>
+			<ul>
+				<li>Any numbers divisible by 3 will return: <span>Fizz</span></li>
+				<li>Any numbers divisible by 5 will return: <span>Buzz</span></li>
+				<li>Any numbers divisible by 3 and 5 will return: <span>FizzBuzz</span></li>
+				<li>Any numbers not divisible by 3, 5 or 3 and 5 will return the <span>Number</span></li>
+			</ul>
+		</section>
+		
+		<p id="result"></p>
+		
+		<section id="inputContainer">
+			<label for="">
+      	<span>Enter Number</span>
+      </label>
+			<input type="number" id="number" placeholder="Enter Number" autofocus="autofocus" required="required">
+			<button onclick="fizzBuzzFunction()" id="submit">Submit</button>
+		</section>
+		
+		<section id="tryContainer">
+			<button onclick="tryAgain()" id="tryAgain">Try Again?</button>
+		</section>
+		
+		<section id="fizzBuzzWiki">
+			<hr class="styleOneTop">
+			<button>
+				<a href="https://en.wikipedia.org/wiki/Fizz_buzz" target="_blank" id="fizzBuzzAnchor">Fizz buzz Wiki</a>
+			</button>
+			<hr class="styleOneBottom">
+		</section>
+	</main>
+
+	<script src="scripts/app.js"></script>
+</body>
+</html>
