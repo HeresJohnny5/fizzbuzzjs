@@ -1,12 +1,25 @@
+// automatically hide error message
+document.getElementById('errorMessage').style.display = 'none';
+
+// fizzBuzzFunction click functionality
 function fizzBuzzFunction() {
 	var x = document.getElementById('number').value;
-	var x = parseInt(x);
+	x = parseInt(x);
 		
-	var newArray = []
-	var i = 1;
-	while(i <= x) {
-		newArray.push(i);
-		i++;
+	if(x <= 0) {
+		var errMsg = document.getElementById('errorMessage');
+		errMsg.style.display = 'block';
+		errMsg.style.color = '#e74c3c';
+		
+		var numInput = document.getElementById('number');
+		numInput.focus();
+	} else {
+		var newArray = []
+		var i = 1;
+		while(i <= x) {
+			newArray.push(i);
+			i++;
+		}
 	}
 	
 	var resultArray = []
@@ -26,9 +39,11 @@ function fizzBuzzFunction() {
 	document.getElementById('tryContainer').style.display = 'block';
 	document.getElementById('result').innerHTML = resultArray.join(", ")
 	document.getElementById('result').style.display = 'block';
+	document.getElementById('tryAgain').focus();
 }
 
 function tryAgain() {
+	document.getElementById('errorMessage').style.display = 'none';
 	document.getElementById('number').value = '';
 	document.getElementById('result').style.display = 'none';
 	document.getElementById('tryContainer').style.display = 'none';
