@@ -5,7 +5,8 @@ document.getElementById('errorMessage').style.display = 'none';
 function fizzBuzzFunction() {
 	var x = document.getElementById('number').value;
 	x = parseInt(x);
-		
+	
+	// conditional functionality limiting the user to only use numbers larger than 0
 	if(x <= 0) {
 		var errMsg = document.getElementById('errorMessage');
 		errMsg.style.display = 'block';
@@ -14,6 +15,7 @@ function fizzBuzzFunction() {
 		var numInput = document.getElementById('number');
 		numInput.focus();
 	} else {
+		// newArray will be an array of numbers ranging from 1 to the user input
 		var newArray = []
 		var i = 1;
 		while(i <= x) {
@@ -22,6 +24,7 @@ function fizzBuzzFunction() {
 		}
 	}
 	
+	// resultArray will have the fizzBuzz array
 	var resultArray = []
 	for(i = 0; newArray[i] <= newArray.length; i++) {
 		if(newArray[i] % 3 === 0 && newArray[i] % 5 === 0) {
